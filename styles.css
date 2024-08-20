@@ -1,47 +1,63 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 1rem 0;
+/* Navigation styles */
+nav {
+    background-color: #333; /* Dark background for the nav bar */
+    text-align: center; /* Center align the content inside the nav */
+    padding: 10px 0; /* Add some vertical padding */
 }
 
-nav ul {
+ul {
     list-style: none;
+    display: inline-flex; /* Inline flex to make the list inline and allow centering */
+    gap: 20px; /* Adds space between the list items */
     padding: 0;
-    margin: 0;
-    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
+a {
+    color: #000; /* Black text color */
+    background-color: #fff; /* White background color */
     text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Hover effect */
+a:hover {
+    background-color: #555; /* Darker background on hover */
+    color: #fff; /* White text color on hover */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a stronger shadow */
+}
+
+/* Section styles */
 section {
     padding: 2rem;
+    color: #fff; /* White text color */
 }
 
 section#home {
-    background: #f4f4f4;
+    background: #111; /* Darker shade of black for contrast */
     text-align: center;
 }
 
 section#about, section#portfolio, section#contact {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+    background: #222; /* Slightly lighter black for contrast */
+    border-bottom: 1px solid #444; /* Darker border color */
 }
 
+/* Gallery styles */
 .gallery {
     display: flex;
     justify-content: space-around;
@@ -56,9 +72,11 @@ section#about, section#portfolio, section#contact {
 .gallery img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Darker border color */
+    border-radius: 10px; /* Slightly rounded corners for images */
 }
 
+/* Form styles */
 form {
     display: grid;
     gap: 1rem;
@@ -72,26 +90,69 @@ form label {
 
 form input, form textarea {
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Darker border color */
     border-radius: 4px;
+    background-color: #333; /* Dark background for form fields */
+    color: #fff; /* White text color */
 }
 
 form button {
     padding: 0.5rem 1rem;
-    background: #333;
+    background: #555;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease; /* Smooth background transition */
 }
 
 form button:hover {
-    background: #555;
+    background: #777; /* Lighter shade on hover */
 }
 
+/* Footer styles */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Rounded circle styles */
+.rounded-circle {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;     /* Center content vertically */
+    height: 20vw;            /* Height is 20% of the viewport width */
+    width: 20vw;             /* Width is 20% of the viewport width */
+    border-radius: 50%;      /* Make the element round */
+    border: 5px solid;       /* Initial border style */
+    border-color: #ddd;      /* Initial border color */
+    margin-left: auto;       /* Center horizontally within a flex container */
+    margin-right: auto;      /* Center horizontally within a flex container */
+    background-color: #000;  /* Match the background color to the body */
+    max-height: 250px;       /* Ensure the circle does not exceed 250px in height */
+    max-width: 250px;        /* Ensure the circle does not exceed 250px in width */
+    animation: borderColorChange 5s linear infinite; /* Animation */
+}
+
+/* Define the border color change animation */
+@keyframes borderColorChange {
+    0% {
+        border-color: #ff0000; /* Red */
+    }
+    25% {
+        border-color: #00ff00; /* Green */
+    }
+    50% {
+        border-color: #0000ff; /* Blue */
+    }
+    75% {
+        border-color: #ffff00; /* Yellow */
+    }
+    100% {
+        border-color: #ff0000; /* Red (loop back to start) */
+    }
+}
+
+
